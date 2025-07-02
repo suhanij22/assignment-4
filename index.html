@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <h3>Q1.</h3>
+    <button class="b1">change</button>
+    <p class="para">hi!</p>
+
+    <h3>Q2.</h3>
+    <button class="b2">remove</button>
+    <div id="div1" >this is my page</div>
+
+    <h3>Q3.& Q8.</h3>
+    <input class="todo1" placeholder="type here" onkeydown="event
+    if(event.key==='Enter')
+    {
+        addlist();
+    }" >
+    <button class="b3" onclick="addlist();">add</button>
+    <ul class="list">
+    </ul>
+
+    <h3>Q4.</h3>
+    <img src="https://images.unsplash.com/photo-1587590227264-0ac64ce63ce8?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8cmFuZG9tJTIwb2JqZWN0c3xlbnwwfHwwfHx8MA%3D%3D" alt="apple" id="image" class="image" height="100px" onclick="imagechange();">
+
+    <h3>Q5.</h3>
+    <form>
+        <label for="name" >name:</label>
+        <input type="text" class="name" placeholder="enter your name here">
+        <br>
+        <label for="XI">class:</label>
+        <label for="XI">
+        <input type="radio" value="XI" class="XI" id="XI">XI
+        </label>
+        <label for="XII">
+        <input type="radio" value="XII" class="XII" id="XII">XII
+        </label>
+        <br>
+        <label for="feed">Feedback:</label>
+        <br>
+        <textarea name="message" placeholder="enter your feedback here" rows="3"></textarea>
+        <br><br>
+        <input type="submit" value="submit" class="submit" >
+    </form>
+
+    <h3>Q6.</h3>
+    <button class="back" id="back" onclick="changeback();">change background</button>
+
+
+    <script>
+        document.querySelector('.b1').addEventListener('click',()=>{
+            change();
+        });
+        document.querySelector('.b2').addEventListener('click',()=>{
+            toggle();
+        });
+        document.querySelector('.b3').addEventListener('click',()=>{
+            addlist();
+        })
+        document.querySelector('.submit').addEventListener('click',()=>{
+            alert('your form has been submitted!');
+        })
+        function change(){
+        let name=document.querySelector('.b1');
+        if(name.innerText==='change')
+    {
+        let name1=document.querySelector('.para');
+        name1.innerHTML=`hello,javascript world!`;
+    }
+}
+function toggle(){
+ 
+    let rem=document.getElementById("div1");
+    if(rem.style.display==='none'){
+        rem.style.display='block';
+    }
+    else
+    {
+        rem.style.display='none';
+    }
+}
+let todo=[];
+function rendertodo(){
+    let todolistHTML='';
+    for(let i=0;i<todo.length;i++)
+{
+    let show=todo[i];
+    const name=show.name;
+    const html=`
+   <div> <li>${name}</li></div> 
+   <div>  <button class="delete" onclick="
+    todo.splice(${i},1);
+    rendertodo();
+    ">delete</button></div>`;
+    todolistHTML+=html;
+    
+    
+}
+console.log(todolistHTML);
+document.querySelector('.list').innerHTML=todolistHTML;
+}
+function addlist(){
+    let todoname=document.querySelector('.todo1');
+    let todoname1=todoname.value;
+    todo.push({name: todoname1});
+    console.log(todo);
+    todoname.value='';
+    rendertodo();
+}
+ let iscolor=false;
+function changeback(){
+   
+    if(iscolor){
+    document.body.style.backgroundColor=``;
+    }
+    else{
+       document.body.style.backgroundColor=`rgb(230, 83, 137)`; 
+}
+iscolor=!iscolor;
+}
+
+function imagechange(){
+    let img=document.getElementById("image");
+    let img1="https://images.unsplash.com/photo-1587590227264-0ac64ce63ce8?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8cmFuZG9tJTIwb2JqZWN0c3xlbnwwfHwwfHx8MA%3D%3D";
+    let img2="https://www.shutterstock.com/image-photo/orang-fruit-isolate-orange-leaves-260nw-1390986104.jpg";
+
+    img.addEventListener('mouseover',()=>{
+        img.src=img2;
+    });
+    img.addEventListener('mouseout',()=>{
+        img.src=img1;
+    });
+}
+    </script>
+</body>
+</html>
