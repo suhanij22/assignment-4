@@ -1,0 +1,37 @@
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url('https://res.cloudinary.com/imagist/image/fetch/q_auto,f_auto,c_scale,w_2624/https%3A%2F%2Fwww.todoist.com%2Fstatic%2Fproduct-ui%2Fbackgrounds%2Fwave-two-red.png');
+    background-size: cover;
+    background-position: center;
+     background-repeat: no-repeat;
+      height: 100vh;
+      margin: 0;
+}
+
+.text{
+    display: grid;
+    grid-template-columns: 181px 100px;
+    row-gap: 3px;
+}
+.delete{
+    margin-top: 3px;
+    width: 46px;
+    padding: 2px;
+    background-color: red;
+    border: 1px solid black;
+}
+.add{
+    width: 46px;
+    background-color: green;
+    border: 1px solid black;
+    padding: 2px;
+}
+.main{
+    align-items: center;
+    justify-content: center;
+}
+.name{
+    left: 100px;
+}
