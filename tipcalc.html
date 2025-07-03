@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="tipcalc.css">
+</head>
+<body>
+    <h1><u>tip calculator</u></h1>
+    <div class="div1">
+  <div class="div2">  
+    <h3>Enter bill price-</h3>
+    <input placeholder="Enter bill price here" class="bill">
+    </div>
+
+    <div class="div3">
+    <h3>Enter tip here-</h3>
+    <input placeholder="Enter tip here" class="tip" onkeydown="if(event.key==='Enter')
+    {
+        tipcalc();
+    }">
+    </div>
+   <button class="enter" onclick="tipcalc();">ENTER</button>
+  
+    </div>
+    <p class="display"></p>
+    <p class="thank"></p>  
+    <script src="tipcalc.js"> </script>
+</body>
+</html>

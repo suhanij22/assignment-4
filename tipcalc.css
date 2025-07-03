@@ -1,0 +1,72 @@
+body{
+    display: flex;
+    justify-content: center;
+    
+    flex-direction: column;
+    background-image: url('https://cdn-media-2.freecodecamp.org/w1280/5f9c9dfa740569d1a4ca3aaf.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: none;
+    align-items: flex-end;
+    margin-right: 130px;
+}
+
+.div1{
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     flex-direction: column;
+    width: 350px;
+    height: 350px;
+    background-color: rgba(9, 16, 16, 0.476);
+    border-radius: 17px;
+}
+.div2,.div3{
+    margin-right: 10px;
+}
+.div2{
+    position: absolute;
+    top: 160px;
+    left: 800px;
+}
+.div3{
+    position: absolute;
+    top: 238px;
+    left: 800px;
+}
+.enter{
+    height: 20px;
+    position: relative;
+    top: 88px;
+    width: 70px;
+    left: 1px;
+    background-color: green;
+    color: white;
+    border:none;
+    font-size: 16px;
+    
+}
+.thank{
+    font-weight: 550;
+    font-size: large;
+    position: absolute;
+    top: 390px;
+    left: 830px;
+}
+.display{
+    color: rgb(225, 181, 6);
+    font-size: 18px;
+     position: absolute;
+    top: 360px;
+    left: 809px;
+}
+h1{
+    position: relative;
+    top: 76px;
+    right: 30px;
+    text-transform: uppercase;
+    color: white;
+}
+h3{
+    color: rgb(69, 6, 6);
+}
