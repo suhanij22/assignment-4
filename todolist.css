@@ -1,37 +1,57 @@
 body{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     background-image: url('https://res.cloudinary.com/imagist/image/fetch/q_auto,f_auto,c_scale,w_2624/https%3A%2F%2Fwww.todoist.com%2Fstatic%2Fproduct-ui%2Fbackgrounds%2Fwave-two-red.png');
     background-size: cover;
     background-position: center;
      background-repeat: no-repeat;
       height: 100vh;
       margin: 0;
-}
-
-.text{
-    display: grid;
-    grid-template-columns: 181px 100px;
-    row-gap: 3px;
-}
-.delete{
-    margin-top: 3px;
-    width: 46px;
-    padding: 2px;
-    background-color: red;
-    border: 1px solid black;
-}
-.add{
-    width: 46px;
-    background-color: green;
-    border: 1px solid black;
-    padding: 2px;
-}
-.main{
+      display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
 }
+.main{
+    height: 350px;
+    width: 350px;
+    background-color: rgba(222, 11, 117, 0.073);
+    border-radius: 25px;
+}
+.text{
+    display: grid;
+    grid-template-columns: 267px 100px;
+    row-gap: 5px;
+    position: absolute;
+    top: 222px;
+    left: 437px;
+    
+}
+.delete{
+    
+    width: 46px;
+    padding: 1px;
+    background-color: rgba(181, 79, 133, 0.443);
+    border: 1px solid black;
+
+}
+.add{
+    width: 45px; height: 26px;
+    background-color: rgb(220, 21, 117);
+    border: 1px solid black;
+    padding: 2px;
+    position: absolute;
+    top: 183px;
+    left: 705px;
+    color: white;
+}
+
 .name{
-    left: 100px;
+   
+    height: 22px;
+    width: 250px;
+    position: absolute;
+    left: 440px;
+}
+h1{
+    position: relative;
+    left: 80px;
 }
